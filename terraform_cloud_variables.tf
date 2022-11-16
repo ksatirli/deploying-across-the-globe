@@ -8,7 +8,7 @@ resource "tfe_variable" "region" {
   }
 
   key          = "AWS_REGION"
-  value        = each.key
+  value        = replace(each.key, var.provider_prefix, "")
   category     = "env"
   description  = "AWS Region of the Workspace."
   workspace_id = each.value.id
