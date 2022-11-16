@@ -10,5 +10,5 @@ data "tfe_oauth_client" "client" {
 }
 
 # get all currently enabled AWS Regions
-# see https://registry.terraform.io/providers/aaronfeng/aws/latest/docs/data-sources/regions
+# see https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/regions
 data "aws_regions" "currently_enabled" {}
